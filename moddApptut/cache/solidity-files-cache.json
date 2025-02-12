@@ -76,8 +76,8 @@
       ]
     },
     "/home/marcus/Marcus/blockchain/Lab 15/moddApptut/contracts/Turing.sol": {
-      "lastModificationDate": 1738537348194,
-      "contentHash": "30187a5e7ff7443390b2180f3f841a09",
+      "lastModificationDate": 1739330400634,
+      "contentHash": "1b64f78996f4edf1c0bf673d1e6904ba",
       "sourceName": "contracts/Turing.sol",
       "solcConfig": {
         "version": "0.8.20",
