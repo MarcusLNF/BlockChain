@@ -3,7 +3,7 @@ import { ethers } from 'ethers';
 import { useState, useEffect } from 'react';
 import TokenArtifact from "./artifacts/contracts/Turing.sol/Turing.json";
 
-const tokenAddress = "0x49e0cfb6b6ce674907f523e1f92b85f3fe8adf1d";
+const tokenAddress = "0xb303857e4a80bd81c526d9e4e94d83c1994030cb";
 
 function App() {
   const [tokenData, setTokenData] = useState({ name: "", symbol: "" });
