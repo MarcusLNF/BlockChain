@@ -1,5 +1,8 @@
 Testes:
 
+Fazer Upload do Contrato no Remix!!!!!!!!!!!!
+
+
 Conta principal (Owner):
 
 	- Ativar/Desativar Votação: OK
