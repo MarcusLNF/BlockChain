@@ -11,7 +11,7 @@ contract Turing is ERC20 {
     mapping(string => address) public nomeParaEndereco;
     mapping(address => bool) public enderecoValido;
     mapping(address => mapping(string => bool)) public votes;
-    string[] public nomes = ["Marcus - Aux01", "Marcus - Aux02"];
+    string[] public nomes = ["marcus1", "marcus2", "marcus3", "marcus4", "marcus5", "marcus6"];
 
     modifier onlyOwnerOrProfessor() {
         require(msg.sender == owner || msg.sender == professor, "Apenas o owner ou a professora podem executar");
@@ -19,17 +19,26 @@ contract Turing is ERC20 {
     }
 
     modifier onlyAuthorized() {
-        require(enderecoValido[msg.sender] || msg.sender == owner || msg.sender == professor , "Usuario nao autorizado");
+        require(enderecoValido[msg.sender], "Usuario nao autorizado");
         _;
     }
 
     constructor() ERC20("Turing", "TRN") {
 
-        nomeParaEndereco["Marcus - Aux01"] = 0xaffcae52D32B42A21803774c449D7d437178d4af;
-        nomeParaEndereco["Marcus - Aux02"] = 0xaa928a7d6acAB9e4F9f2c77b25E72fAb5e6D25aa;
+        nomeParaEndereco["marcus1"] = 0xaffcae52D32B42A21803774c449D7d437178d4af;
+        nomeParaEndereco["marcus2"] = 0xaa928a7d6acAB9e4F9f2c77b25E72fAb5e6D25aa;
+        nomeParaEndereco["marcus3"] = 0xa03Fdf08674e2377566b2C8ABF3B3152bA04EDBA;
+        nomeParaEndereco["marcus4"] = 0xa04360a53Fa56353f380293A800CD12E33ef5f23;
+        nomeParaEndereco["marcus5"] = 0xa056334BA868D8e3B1d439e6e9c4CF3E17f04794;
+        nomeParaEndereco["marcus6"] = 0xa0638dad5aCddc37A2011c515e48DEC530bc5fA1;
+
 
         enderecoValido[0xaffcae52D32B42A21803774c449D7d437178d4af] = true;
         enderecoValido[0xaa928a7d6acAB9e4F9f2c77b25E72fAb5e6D25aa] = true;
+        enderecoValido[0xa03Fdf08674e2377566b2C8ABF3B3152bA04EDBA] = true;
+        enderecoValido[0xa04360a53Fa56353f380293A800CD12E33ef5f23] = true;
+        enderecoValido[0xa056334BA868D8e3B1d439e6e9c4CF3E17f04794] = true;
+        enderecoValido[0xa0638dad5aCddc37A2011c515e48DEC530bc5fA1] = true;
     }
 
     function addUser(string calldata codinome, address userAddress) external onlyOwnerOrProfessor {
