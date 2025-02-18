@@ -1,0 +1,20 @@
+Testes:
+
+Conta principal (Owner):
+
+	- Ativar/Desativar Votação: OK
+	- Emitir tokens: Ok
+	- Tentar votar (Com a votação ativada/desativada)
+		- Ambos é para dar erro: OK
+
+Conta Marcus1:
+	- Tentar Ativar/Desativar Votação: OK
+	- Emitir Token: OK
+	- Votar
+		- 1 Turing: OK
+		- votar em si msm: OK
+		- mais que 2 turings: OK
+		- Votar na mesma pessoa: OK
+
+Conta Marcus2:
+	- Votar na conta Marcus1: OK
